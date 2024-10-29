@@ -9,22 +9,25 @@ namespace Exercice_03
     {
         static void Main(string[] args)
         {
-            using System;
-                // Exemple d'utilisation
-                int borneInf = 3;
-                int borneSup = 100;
+            // Exemple d'utilisation
+                Console.WriteLine("Veuiller saisir la borne minimale");
+                int borneInf  = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Veuiller saisir la borne Maximale");
+                int borneSup = Convert.ToInt32(Console.ReadLine());
+
                 int nombrePairs = CompterNombresPairs(borneInf, borneSup);
                 Console.WriteLine($"Le nombre de nombres pairs entre {borneInf} et {borneSup} est : {nombrePairs}");
 
             static int CompterNombresPairs(int borneInf, int borneSup)
             {
-                // Initialisation du compteur
+                
                 int compteur = 0;
 
-                // On commence à la première valeur après la borne inférieure
+                
                 for (int i = borneInf + 1; i < borneSup; i++)
                 {
-                    // Vérification si le nombre est pair
+                    
                     if (i % 2 == 0)
                     {
                         compteur++;
@@ -37,4 +40,4 @@ namespace Exercice_03
 
     }
 }
-}
+
